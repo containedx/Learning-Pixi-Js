@@ -10,6 +10,7 @@
 
   <script src="pixi/pixi.min.js"></script>
   <script type="text/javascript">
+    
     let type = "WebGL";
     if (!PIXI.utils.isWebGLSupported()) {
       type = "canvas";
@@ -18,13 +19,30 @@
     PIXI.utils.sayHello(type);
 
     //Create a Pixi Application
-    const app = new PIXI.Application({width: 1024, height: 512});
+    const app = new PIXI.Application();
 
     //Add the canvas that Pixi automatically created for you to the HTML document
     document.body.appendChild(app.view);
 
     // bg color 
     app.renderer.backgroundColor = 0xd8ddd7;
+      
+    
+    // DISPLAYING IMAGE :3
+      
+    //Load image
+    PIXI.Loader.shared
+      .add("img/cat.jpg")
+      .load(setup);
+      
+    function setup() {
+        
+        //create sprite
+        const cat = new PIXI.Sprite(PIXI.Loader.shared.resources["img/cat.jpg"].texture)
+        
+        //add to stage (scene)
+        app.stage.addChild(cat)
+    }
 
   </script>
 
