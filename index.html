@@ -2,49 +2,12 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World</title>
+  <title>KINGA PIXI</title>
 </head>
 <body>
-  <h1>Hello World! <h1>
-  Below is pixi js app container. I think.
 
   <script src="pixi/pixi.min.js"></script>
-  <script type="text/javascript">
-    
-    let type = "WebGL";
-    if (!PIXI.utils.isWebGLSupported()) {
-      type = "canvas";
-    }
-
-    PIXI.utils.sayHello(type);
-
-    //Create a Pixi Application
-    const app = new PIXI.Application();
-
-    //Add the canvas that Pixi automatically created for you to the HTML document
-    document.body.appendChild(app.view);
-
-    // bg color 
-    app.renderer.backgroundColor = 0xd8ddd7;
-      
-    
-    // DISPLAYING IMAGE :3
-      
-    //Load image
-    PIXI.Loader.shared
-      .add("img/cat.jpg")
-      .load(setup);
-      
-    function setup() {
-        
-        //create sprite
-        const cat = new PIXI.Sprite(PIXI.Loader.shared.resources["img/cat.jpg"].texture)
-        
-        //add to stage (scene)
-        app.stage.addChild(cat)
-    }
-
-  </script>
+  <script src="script/app.js"></script>
 
 </body>
 </html>
