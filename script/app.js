@@ -18,6 +18,16 @@ let type = "WebGL";
       
     
     // DISPLAYING IMAGE :3
+    for( let j = 0 ; j < 5 ; j++)
+    {
+      for ( let i=0 ; i < 8 ; i++){
+
+        const helmlok = PIXI.Sprite.from('img/helmlok.png');
+        helmlok.x += i * 150;
+        helmlok.y += j * 200;
+        console.log(helmlok.x)
+        app.stage.addChild(helmlok);
+
+      }
+    }
     
-    const helmlok = PIXI.Sprite.from('img/helmlok.png');
-    app.stage.addChild(helmlok);
