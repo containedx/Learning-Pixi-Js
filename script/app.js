@@ -18,17 +18,6 @@ let type = "WebGL";
       
     
     // DISPLAYING IMAGE :3
-      
-    //Load image
-    PIXI.Loader.shared
-      .add("img/helmlok.png")
-      .load(setup);
-      
-    function setup() {
-        
-        //create sprite
-        const cat = new PIXI.Sprite(PIXI.Loader.shared.resources["img/helmlok.png"].texture)
-        
-        //add to stage (scene)
-        app.stage.addChild(cat)
-    }
+    
+    const helmlok = PIXI.Sprite.from('img/helmlok.png');
+    app.stage.addChild(helmlok);
