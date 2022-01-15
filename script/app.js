@@ -24,7 +24,9 @@ let type = "WebGL";
         const helmlok = PIXI.Sprite.from('img/helmlok.png');
         helmlok.x += i * 150;
         helmlok.y += j * 200;
-        console.log(helmlok.x)
+
+        helmlok.tint = Math.random() * 0xFFFFFF;
+
         app.stage.addChild(helmlok);
 
       }
