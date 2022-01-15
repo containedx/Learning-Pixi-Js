@@ -26,6 +26,7 @@ let type = "WebGL";
       helmlok.x += Math.random() * app.screen.width;
       helmlok.y += Math.random() * app.screen.height;
       helmlok.tint = Math.random() * 0xFFFFFF;
+      helmlok.rotation = Math.random() * 2 * Math.PI;
 
       app.stage.addChild(helmlok);
 
